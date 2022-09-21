@@ -1,0 +1,7 @@
+<!-- <h1 [title]="'SoMe valUe' | pipeName:param1:param2">
+  {{ 'SoMe valUe'| pipeName:param1:param2 | pipeName:param1:param2 }}
+</h1> -->
+
+<h1>{{ 'SoMe valUe' | appTextTransform:'prefix':'lowercase' }}</h1>
+<h1>{{ transform('SoMe valUe', 'prefix') }}</h1>
+<button (click)="title= title + '1'">Push me</button>

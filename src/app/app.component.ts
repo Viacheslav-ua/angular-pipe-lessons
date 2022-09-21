@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-pipe-lessons'
+  dateObject: Date = new Date()
+  timestamp: number = Date.now()
+  dateString: string = '2022-09-21'
 }

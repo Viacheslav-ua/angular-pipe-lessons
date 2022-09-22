@@ -1,0 +1,6 @@
+<p>foo works!</p>
+<button (click)="updateUser()">Update user</button>
+<div *ngIf="user$ | appAsync as user">
+  <p>Her Name is {{ user.name }}</p>
+  <p>Her Surname is {{ user.surname }}</p>
+</div>

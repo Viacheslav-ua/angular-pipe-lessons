@@ -1,0 +1,29 @@
+<p>smart works!</p>
+
+<app-dumb
+  (delete)="onDelete($event)"
+  *ngIf="newUser$ | async as user"
+  [user]="user" >
+</app-dumb>
+
+<app-dumb
+  (delete)="onDelete($event)"
+  [user]="newUser$ | async" >
+</app-dumb>
+
+
+<p>{{ value | async }}</p>
+<p>{{ value$ | async }}</p>
+
+<p>{{ name$ | async }}</p>
+<p *ngIf="name$ | async">{{ name$ | async }}</p>
+
+<p *ngIf="name$ | async as name">{{ name + '-1' }}</p>
+
+<pre *ngIf="user$ | async as user">{{ user | json }}</pre>
+
+<div *ngFor="let item of array$ | async as items" (click)="onItemClick(item, items)">
+  {{ item }}
+</div>
+
+
